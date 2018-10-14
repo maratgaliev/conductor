@@ -1,0 +1,24 @@
+<html ng-app="Conductor" ng-csp="">
+  <head>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/custom.css">
+    <script src="assets/javascripts/jquery.js"></script>
+    <script src="assets/javascripts/sugar.js"></script>
+    <script src="assets/javascripts/uri.js"></script>
+    <script src="assets/javascripts/ansi2html.js"></script>
+    <script src="assets/javascripts/angular.js"></script>
+    <script src="assets/javascripts/filters.js"></script>   
+    <script src="assets/javascripts/transactions.js"></script> 
+    <script src="assets/javascripts/panel.js"></script>
+    <script src="assets/javascripts/requests.js"></script>
+    <script src="assets/javascripts/init.js"></script>
+  </head>
+  <body class="conductor">
+      <div id="main_view" ng-controller='TransactionsController'>
+        <div id="log" ng-show="notEmpty(devLog())">
+          <div ng-repeat="log in devLog()">
+            <p ng-bind-html-unsafe="log.payload.message | ansi2html"></p>
+          </div>
+        </table>
+      </div>
+    </body>
+</html>

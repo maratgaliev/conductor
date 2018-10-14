@@ -1,0 +1,22 @@
+{
+  "name": "Conductor",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Logs devtools panel for Rails development",
+  "devtools_page": "devtools.html",
+  "background": {
+    "scripts": [
+      "assets/javascripts/jquery.js",
+      "assets/javascripts/background.js"
+    ]
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "assets/images/logo_16.png",
+    "48": "assets/images/logo_48.png",
+   "128": "assets/images/logo_128.png"
+ }  
+}
